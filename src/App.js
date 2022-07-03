@@ -37,15 +37,21 @@ const FunctionHandler = ()=>{
   return (
 
 <div className="App">
-    <header>
+<div className='container-fluid'>
+  <div className='row'>
+<div className='col-2 col-lg-2 col-md-2 col-sm-2'>
+<header>
      <h1>ADD ITEM <hr></hr> </h1> 
     </header>
   <Form setInputText={setInputText} setStatusBar={setStatusBar} todos={todos} setTodos={setTodos} inputText={inputText} />
-
   <h3 className='TODO'>TO-DO LIST <hr className='totohr' /> </h3>
   <TodoList todos={todos} setTodos={setTodos} filtered={filtered} />
-  <h3>COMPLETED LIST </h3> 
+  {/* <h3>COMPLETED LIST </h3>  */}
   {/* <Completed todos={todos} setcomp={setcomp} setTodos={setTodos} filtered={filtered}></Completed> */}
+</div>
+  </div>
+
+</div>
   </div>
     );
 }

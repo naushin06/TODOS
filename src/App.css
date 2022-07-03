@@ -135,7 +135,11 @@ select {
   margin: 1rem;
   position: relative;
   overflow: hidden;
+  width: 200px;
 
+}
+#wi{
+  width: 200px;
 }
 select {
   color: #7858A6;

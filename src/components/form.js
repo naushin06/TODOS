@@ -35,18 +35,28 @@ setStatusBar(e.target.value);
 }
     return(
         <form>
-      <input value={inputText} onChange={InputHandler}   type="text" className="todo-input" required/>
-      <button className=" todo-button"  onClick={submitHandler}type="submit">
-        <i className="fas fa-plus-square"></i>
+          <div className="container-fluid">
+            <div className="row">
+              <div className=" col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+        <input id="wi" value={inputText} onChange={InputHandler}   type="text" className="todo-input" required/>
+        <button className=" todo-button"  onClick={submitHandler}type="submit">
+        <i className="fas fa-plus-square"> <p></p></i>
       </button>
-      <div className="select">
-        <select onClick={StatusBarHandler} name="todos" className="filter-todo">
-          <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
-        </select>
       
-      </div>
+     
+              </div>
+
+
+
+        
+            </div>
+          </div>
+
+
+
+
+
      
     </form>
 
