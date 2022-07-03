@@ -44,7 +44,16 @@ setStatusBar(e.target.value);
         <i className="fas fa-plus-square"> <p></p></i>
       </button>
       
-     
+      
+       <div className="select">
+        <select onClick={StatusBarHandler} name="todos" className="filter-todo">
+      
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+        </select>
+      
+      </div>  
               </div>
 
 
@@ -57,6 +66,26 @@ setStatusBar(e.target.value);
 
 
 
+
+      {/* <input value={inputText} onChange={InputHandler}   type="text" className="todo-input" required/>
+      
+      <br />
+      <button className=" todo-button"  onClick={submitHandler}type="submit">
+        <i className="fas fa-plus-square"></i>
+      
+      </button>
+     
+      
+      
+      <div className="select">
+        <select onClick={StatusBarHandler} name="todos" className="filter-todo">
+      
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+        </select>
+      
+      </div> */}
      
     </form>
 
