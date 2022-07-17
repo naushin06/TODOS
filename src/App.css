@@ -4,13 +4,17 @@
   box-sizing: border-box;
 }
 body {
- background-color: #CDF0EA;
+ background-color: black;
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
 header {
   font-size: 2rem;
+}
+.title{
+  display: block;
+  color: white;
 }
 
 header,
@@ -38,9 +42,9 @@ form button:hover {
   color: white;
 }
 .todo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .todo-list {
@@ -50,10 +54,8 @@ form button:hover {
 
 .todo {
   margin: 0.5rem;
-  background: white;
   font-size: 1.5rem;
-  color: black;
-  display: flex;
+  display: inline-block;
   justify-content: space-between;
   align-items: center;
   transition: all 1s ease;
@@ -62,20 +64,44 @@ form button:hover {
   padding: 1rem;
 }
 .todo li {
+  padding: 8%;
   flex: 1;
+  flex: 1 1;
+  background-color: #2F2F2F;
+  BORDER-RADIUS: 20px 20px 0px 0px;
+  color: white;
+}
+.todo li::after{
+background-color: greenyellow;
+}
+.BTNDIV{
+  background: #2F2F2F;
+  padding: 5%;
+  border-radius: 0px 0px 20px 20px;
 }
 
-.trash-btn,
-.complete-btn {
-  background: #7858A6;
+
+.trash-btn{
+  padding: 6px 25px;
+background-color: #2F2F2F;;
+  margin: 0%;
+  border-radius: 2px;
+ 
   color: white;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1rem;
 }
 .complete-btn {
-  background: rgb(11, 212, 162);
+
+  padding: 6px 25px;
+  BORDER-COLOR: #C620A7;
+  margin: 0%;
+  border-radius: 2px;
+  border-block-color: #C620A7;
+  background-color: #C620A7;
+  color: white;
+}
+.trash-btn:hover{
+color:#C620A7 ;
+background: #000;
 }
 .todo-item {
   padding: 0rem 0.5rem;
@@ -138,10 +164,9 @@ select {
   width: 200px;
 
 }
-#wi{
-  width: 200px;
-}
 select {
+  padding: 10px;
+  padding-top: 10px;
   color: #7858A6;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
@@ -170,4 +195,29 @@ select {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.thead{
+  justify-items: center;
+  text-align: center;
+  padding: 3%;
+}
+.sbtn{
+  padding: 6px 25px; 
+  BORDER-COLOR: #C620A7;
+  margin: 0%;
+  border-radius: 2px;
+  border-block-color: #C620A7;
+  background-color: #C620A7;
+  color: white;
+}
+.todo-input{
+  color: wheat;
+height: 30px;
+  margin: 2%;
+  background-color: rgb(32, 23, 23);
+  width: 30%;
+  border-radius: 4px;
+}
+.del{
+  color:white;
 }

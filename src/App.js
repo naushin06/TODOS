@@ -5,14 +5,16 @@ import TodoList from './components/TodoList';
 import Todo from './components/todo';
 import Completed from './components/completed';
 import CompletedList from './components/completed';
-
-  
+import API from './components/node_learning/pi';
+  import AjaxGET from './components/AjaxGET'
 function App() {
 const[inputText,setInputText]=useState("");
 const[todos,setTodos]=useState([]);
 const[statusbar,setStatusBar]=useState("all");
 const[filtered, setFiltered]=useState([]);
 const [comp,setcomp]=useState([]);
+const [database,setdatabase]=useState([])
+
 
 
 useEffect(()=>{
@@ -22,37 +24,28 @@ useEffect(()=>{
 const FunctionHandler = ()=>{ 
    switch (statusbar){
     case "completed":
-      setFiltered(todos.filter((todo) => todo.completed === true));
+      setdatabase(database.filter((todo) => todo.completed === true));
       break;
       case "uncompleted":
-        setFiltered(todos.filter((todo) => todo.completed === false));
+        setdatabase(database.filter((todo) => todo.completed === false));
         break;
         default :
-        setFiltered(todos);
-        setcomp(todos)
+        setdatabase(todos);
        break;
   }
 }
-
   return (
-
 <div className="App">
-<div className='container-fluid'>
-  <div className='row'>
-<div className='col-2 col-lg-2 col-md-2 col-sm-2'>
-<header>
-     <h1>ADD ITEM <hr></hr> </h1> 
-    </header>
+<h4 className='thead'>To-Do List </h4>
   <Form setInputText={setInputText} setStatusBar={setStatusBar} todos={todos} setTodos={setTodos} inputText={inputText} />
-  <h3 className='TODO'>TO-DO LIST <hr className='totohr' /> </h3>
-  <TodoList todos={todos} setTodos={setTodos} filtered={filtered} />
+<h6>Added items in the todo list</h6>
+  <TodoList todos={todos} setTodos={setTodos} filtered={filtered} database={database} setdatabase={setdatabase} />
   {/* <h3>COMPLETED LIST </h3>  */}
   {/* <Completed todos={todos} setcomp={setcomp} setTodos={setTodos} filtered={filtered}></Completed> */}
+{/* <API></API> */}
+<AjaxGET></AjaxGET>
 </div>
-  </div>
 
-</div>
-  </div>
     );
 }
 export default App;
